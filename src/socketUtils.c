@@ -32,7 +32,6 @@ socketStruct *createSocket(char *host, int secure)
     error = getaddrinfo(host, (secure ? HTTPS_PORT : HTTP_PORT), &hints, &DNSresult);
     if (error)
     {
-        // TODO: add more error info, see manual
         logPanic("Could not resolve '%s'!", host);
     }
 

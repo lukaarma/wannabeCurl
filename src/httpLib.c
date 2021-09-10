@@ -33,12 +33,6 @@ void generateHeaders(httpRequest *req)
     httpForm *formEntry;
     httpHeader *header;
 
-    /* NOTE: we set recv as non blocking, leaving this as backup for now
-    header->line       = "Connection: close";
-    header->lineLength = 17;
-    header->next       = req->headers;
-    req->headers       = header; */
-
     // Content-Type
     if (req->type == TEXT_PLAIN || req->type == JSON)
     {
@@ -405,9 +399,4 @@ void reciveBody(socketStruct *socketInfo, httpResponse *res)
             free(buffer);
         }
     }
-
-    // check for trailers
-    //buffer = readLine(socketInfo);
-
-    // TODO: handle optional trailers and final CRLF
 }
