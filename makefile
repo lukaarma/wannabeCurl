@@ -10,6 +10,7 @@ wannabeCurl: $(OBJECTS)
 
 # $< replaced by the first prerequisite, used since we are just compiling
 obj/%.o: src/%.c $(HEADERS)
+	@ mkdir -p obj
 	$(CC) -c $< -o $@
 
 # -g adds debug info to the executable, -O0 helps Valgrind
