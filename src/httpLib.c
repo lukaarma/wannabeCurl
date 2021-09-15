@@ -147,7 +147,7 @@ void reciveResponse(socketStruct *socketInfo, httpResponse *res)
     logInfo("Reciving and parsing response headers..");
     responseHeaders = readHeaders(socketInfo);
 
-    logFile(DEBUG, res->filename, res->filenameLength, ".res.txt", 8, "%s", responseHeaders);
+    logFile(DEBUG, res->filename, res->filenameLength, "res.txt", 7, "%s", responseHeaders);
     parseHeaders(res, responseHeaders);
     free(responseHeaders);
 

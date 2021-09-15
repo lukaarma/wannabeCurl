@@ -119,7 +119,7 @@ error_t optionParser(int key, char *arg, struct argp_state *state)
     case ARGP_KEY_END:
         if (req->hostLength == 0 || req->pathLength == 0)
         {
-            logError("MIssing/Invalid url!");
+            logError("Missing/Invalid url!");
             argp_usage(state);
         }
 
@@ -142,7 +142,7 @@ void parseArguments(int argc, char **argv, httpRequest *req)
                                      "Methods available GET (default), HEAD, POST, PUT, DELETE"},
         {"header", 'h', "'name: value'", 0, "Add the name value pair as header to the request, can be used multiple times."},
         {"form", 'f', "'key=value'", 0, "Add an html form body, can be used multiple times to add multiple key value pairs"},
-        {"text", 't', "'conetnt'", 0, "Add a text body to the request"},
+        {"text", 't', "'content'", 0, "Add a text body to the request"},
         {"json", 'j', "'json string'", 0, "Add a json body to the request.\n"
                                           "It also add the header with the correct encoding."},
         {0}};

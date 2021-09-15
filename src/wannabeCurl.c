@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 
     buildRequest(req);
     logFile(DEBUG, res->filename, res->filenameLength,
-            ".req.txt", 8, "%.*s", req->payloadSize, req->payload);
+            "req.txt", 7, "%.*s", req->payloadSize, req->payload);
 
     sendMessage(socketInfo, req->payload, req->payloadSize);
 
