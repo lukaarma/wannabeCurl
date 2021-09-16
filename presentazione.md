@@ -4,6 +4,8 @@
 
 ### NOT CHUNKED
 
+- `./wannabeCurl 'http://www.unimi.it/'` (301)
+- `./wannabeCurl 'http://www.unimi.it/it'`
 - `./wannabeCurl 'http://www.httpbin.org/'`
 - `./wannabeCurl 'http://www.httpbin.org/get'`
 
