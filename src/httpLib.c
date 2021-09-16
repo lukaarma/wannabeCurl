@@ -11,11 +11,12 @@
 #include <sys/socket.h>
 
 const char *methodNames[] = {
-    [GET]    = "GET",
-    [HEAD]   = "HEAD",
-    [POST]   = "POST",
-    [PUT]    = "PUT",
-    [DELETE] = "DELETE"};
+    [GET]     = "GET",
+    [HEAD]    = "HEAD",
+    [OPTIONS] = "OPTIONS",
+    [POST]    = "POST",
+    [PUT]     = "PUT",
+    [DELETE]  = "DELETE"};
 
 const char *contentTypeValue[] = {
     [NONE]       = "",
@@ -379,7 +380,7 @@ void reciveBody(socketStruct *socketInfo, httpResponse *res)
         while (1)
         {
             // read chunk size
-            buffer = readLine(socketInfo);
+            buffer    = readLine(socketInfo);
             chunkSize = strtol(buffer, NULL, 16);
             free(buffer);
 

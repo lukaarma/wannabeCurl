@@ -139,7 +139,7 @@ void parseArguments(int argc, char **argv, httpRequest *req)
         {"verbose", 'v', 0, 0, "Enable verbose console output"},
         {"quiet", 'q', 0, 0, "Suppress all console output except errors"},
         {"method", 'm', "METHOD", 0, "Choose the method of the HTTP/S request. \n"
-                                     "Methods available GET (default), HEAD, POST, PUT, DELETE"},
+                                     "Methods available GET (default), HEAD, OPTIONS, POST, PUT, DELETE"},
         {"header", 'h', "'name: value'", 0, "Add the name value pair as header to the request, can be used multiple times."},
         {"form", 'f', "'key=value'", 0, "Add an html form body, can be used multiple times to add multiple key value pairs"},
         {"text", 't', "'content'", 0, "Add a text body to the request"},

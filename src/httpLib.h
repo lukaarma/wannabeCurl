@@ -14,6 +14,7 @@ typedef enum httpMethods
 {
     GET,
     HEAD,
+    OPTIONS,
     POST,
     PUT,
     DELETE,
