@@ -1,6 +1,6 @@
 # HTTP - HTTPS
 
-## GET - HEAD
+## GET - HEAD - OPTIONS
 
 ### NOT CHUNKED
 
